@@ -15,3 +15,12 @@ Sample usage/output (using made-up numbers):
 You can find an XML-encoded version of Macbeth here: http://www.ibiblio.org/xml/examples/shakespeare/macbeth.xml. Your program should download and parse this file at runtime.
 
 Your solution must be tested, preferably via TDD.
+
+
+To run it:
+
+```
+git clone https://github.com/manfe/shakespeare_analyzer.git manfe_shakespeare_analyzer
+cd manfe_shakespeare_analyzer
+ruby lib/analyzer.rb 
+```
