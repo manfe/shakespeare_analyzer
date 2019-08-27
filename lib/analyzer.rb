@@ -22,13 +22,7 @@ class Analyzer
 
     @speechers = @speechers.sort_by { |k, v| -v }.to_h
 
-    if format == :hash
-      @speechers
-    else
-      @speechers.map {|name, lines| 
-        "#{name} #{lines}\n"
-      }
-    end
+    print_as(format)
   end
 
   private
@@ -37,6 +31,16 @@ class Analyzer
       open(url).read
     rescue
       raise "Failed to open the URL, check it please"
+    end
+  end
+
+  def print_as(format)
+    if format == :hash
+      @speechers
+    else
+      @speechers.map {|name, lines| 
+        "#{name} #{lines}\n"
+      }
     end
   end
 
